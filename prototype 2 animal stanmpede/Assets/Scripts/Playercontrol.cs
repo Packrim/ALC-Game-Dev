@@ -35,7 +35,7 @@ public class Playercontrol : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(foodProjectile, transform.position, foodProjectiled.transform.rotation);
+            Instantiate(foodProjectile, transform.position, foodProjectile.transform.rotation);
         }
     }
 }
