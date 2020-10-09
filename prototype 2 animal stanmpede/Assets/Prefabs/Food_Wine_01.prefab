@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8044779747248546458}
   - component: {fileID: 5477259401136587280}
   - component: {fileID: 5226080311753394031}
+  - component: {fileID: 1022149948928923827}
   m_Layer: 0
   m_Name: Food_Wine_01
   m_TagString: Untagged
@@ -126,3 +127,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &1022149948928923827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4440488712503785104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0532ca5c7a4449192e8924e9e85d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBounds: 35
+  lowerBounds: -13
