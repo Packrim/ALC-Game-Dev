@@ -760,7 +760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
-  speed: 10
+  speed: 15
   xRange: 19
   foodProjectile: {fileID: 4440488712503785104, guid: 4fb957b268a5c4572a8b35d4a2a78aec,
     type: 3}
