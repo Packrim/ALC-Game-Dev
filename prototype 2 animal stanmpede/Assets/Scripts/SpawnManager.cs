@@ -9,7 +9,7 @@ public class SpawnManager : MonoBehaviour
     private float spawnPosZ = 29.5f;
     
     private float startDelay = 2f;
-    private float spawnInterval= 1.5f;
+    private float spawnInterval = int ballSpawn = Random.Range(3,5);
     
     void Start()
     {
