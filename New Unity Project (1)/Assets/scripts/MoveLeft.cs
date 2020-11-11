@@ -5,20 +5,20 @@ using UnityEngine;
 public class MoveLeft : MonoBehaviour  
 {
     private float speed = 30;
-    private PlayerControl PlayerControlScript;
+    private PlayerControl playerControlScript;
     private float leftBound = -15;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        PlayerControlScript = GameObject.Find("Player").GetComponent<PlayerControl>();
+        playerControlScript = GameObject.Find("player").GetComponent<PlayerControl>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(PlayerControlScript.gameOver == false)
+        if(playerControlScript.gameOver == false)
         {
              transform.Translate(Vector3.left * Time.deltaTime * speed);
         }

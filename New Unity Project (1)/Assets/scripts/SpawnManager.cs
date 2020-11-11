@@ -16,7 +16,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
        InvokeRepeating("SpawnObstacle", startDelay, repeatDelay);
-       PlayerControlScript = GameObject.Find("Player").GetComponent<PlayerControl>();
+       PlayerControlScript = GameObject.Find("player").GetComponent<PlayerControl>();
     }
     
     void SpawnObstacle()
