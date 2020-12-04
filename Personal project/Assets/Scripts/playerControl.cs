@@ -6,7 +6,8 @@ public class playerControl : MonoBehaviour
 {
     private float forwardInput;
     private float turnInput;
-    private float speed = 10; 
+    private float speed = 15; 
+    private float turnSpeed = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +19,9 @@ public class playerControl : MonoBehaviour
     void Update()
     {
         turnInput = Input.GetAxis("Horizontal");
-        forwardInput = forwardInput.GetAxis("Vertical");
+        forwardInput = Input.GetAxis("Vertical");
 
         transform.Translate(Vector3.forward * Time.deltaTime * forwardInput * speed);
-        tramsform.Rotate(Vector3.up, turnSpeed * Time.deltaTime * speed);
+        transform.Rotate(Vector3.up, turnSpeed * turnInput * Time.deltaTime);
     }
 }
