@@ -20,7 +20,7 @@ public class SpawnManagerX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemyCount = GameObject.FindGameObjectsWithTag("Powerup").Length;
+        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
         if (enemyCount == 0)
         {
@@ -30,11 +30,12 @@ public class SpawnManagerX : MonoBehaviour
     }
 
     // Generate random spawn position for powerups and enemy balls
-    Vector3 GenerateSpawnPosition ()
+    private Vector3 GenerateSpawnPosition ()
     {
         float xPos = Random.Range(-spawnRangeX, spawnRangeX);
         float zPos = Random.Range(spawnZMin, spawnZMax);
-        return new Vector3(xPos, 0, zPos);
+        Vector3 randomPos = new Vector3(xPos, 0, zPos);
+        return randomPos;
     }
 
 
