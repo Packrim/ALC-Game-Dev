@@ -14,6 +14,7 @@ public class PlayerControllerX : MonoBehaviour
 
     private float normalStrength = 10; // how hard to hit enemy without powerup
     private float powerupStrength = 25; // how hard to hit enemy with powerup
+    public ParticleSystem turbo;
     
     void Start()
     {
@@ -33,6 +34,7 @@ public class PlayerControllerX : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             playerRb.AddForce(focalPoint.transform.forward * speed * 3 * Time.deltaTime);
+            turbo.Play();
         }
 
     }
