@@ -8,10 +8,12 @@ public class playerControl : MonoBehaviour
     private float turnInput;
     private float speed = 15; 
     private float turnSpeed = 150;
+    private Animator playerAnim;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerAnim = GetComponent<Animator>();
         
     }
 
@@ -23,5 +25,13 @@ public class playerControl : MonoBehaviour
 
         transform.Translate(Vector3.forward * Time.deltaTime * forwardInput * speed);
         transform.Rotate(Vector3.up, turnSpeed * turnInput * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerAnim.SetBool("Sword_Swing", true);
+        }
+        else 
+        {
+            playerAnim.SetBool("Sword_Swing", false);
+        }
     }
 }
